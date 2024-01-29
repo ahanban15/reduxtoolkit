@@ -4,9 +4,9 @@ const initialState = {
     todos: [{id: 1, text: "Do CP"}]
 }
 
-function sayHello(){
-    console.log("Hello World!");
-}
+// function sayHello(){
+//     console.log("Hello World!");
+// }
 
 export const todoSlice = createSlice({
     name: 'todo',
@@ -26,3 +26,9 @@ export const todoSlice = createSlice({
     }
 })
 
+//how to export a reducer
+//exported individual functionality
+export const {addTodo, removeTodo} = todoSlice.actions;
+
+//also send a list to tore
+export default todoSlice.reducer;
